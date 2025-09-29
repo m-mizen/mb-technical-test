@@ -194,3 +194,8 @@ I have not just blindly accepted AI-generated code. Instead, I have reviewed and
 My general approach has been to use AI to help with small parts of the codebase, rather than relying on it to generate large chunks of code. This has allowed me to maintain control over the overall structure and design of the application, while still benefiting from the efficiency and speed that AI can provide.
 
 Most of the time, it's more of an enhanced code-completion tool, rather than a full code generation tool.
+
+
+## Final note
+
+I forgot to commit my changes incrementally, so the commit history is basically non-existent. Apologies for that. I would ideally have commited each logical change separately, and making sure to use meaningful commit messages.
