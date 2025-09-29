@@ -36,14 +36,19 @@ If you want to run the frontend locally, ensure you have:
    ```bash
    docker-compose up -d cms
    ```
-5. Start the web services using Docker Compose:
+5. Access the PocketBase admin interface at `http://localhost:8090/_`  and log in using the default credentials:
+    - Email: `admin@example.com`
+    - Password: `password123`
+
+   _Note 1: In testing this out, I found that sometimes PocketBase takes a little while to start up fully, so if you get a connection error, just wait 2 minutes and try again._ 
+
+   _Note 2: Please note that you need the "\_" at the end of the URL to see the admin interface._
+
+6. Start the web services using Docker Compose:
    ```bash
    docker-compose up -d web
    ```
-5. Access the PocketBase admin interface at `http://localhost:8090` and log in using the default credentials:
-    - Email: `admin@example.com`
-    - Password: `password123`
-6. Access the Next.js frontend at `http://localhost:3000`.
+7. Access the Next.js frontend at `http://localhost:3000`.
 
 ### Running without Docker
 
