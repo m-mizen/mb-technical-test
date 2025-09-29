@@ -1,0 +1,1 @@
+These logos were taken from the press kit. They might not be the best option for the website, as I'm sure that the design team have better options available.

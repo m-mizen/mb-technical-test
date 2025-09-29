@@ -1,0 +1,1 @@
+In an ideal world these would be auto-generated from the CMS schema. For now, they are manually kept in sync.
