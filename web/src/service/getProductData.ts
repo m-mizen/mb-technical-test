@@ -35,7 +35,7 @@ export async function getProductData(): Promise<ProductCategoryType[]> {
                         icon: product.icon
                     }, product.icon, { thumb: '50x50' }))
                     // This line is a hack to make it work in Docker Compose setup where the cms is not accessible via localhost
-                    .replace('http://cms:8090', 'http://127.0.0.1:8090') : ''
+                    .replace('cms:8090', '127.0.0.1:8090') : ''
             } as ProductType)
                 // Sort products by the 'sort' field
             ).toSorted((a, b) => a.sort - b.sort)
