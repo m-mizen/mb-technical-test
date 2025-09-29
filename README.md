@@ -26,14 +26,19 @@ If you want to run the frontend locally, ensure you have:
 
 1. Clone the repository
 2. Navigate to the project directory
-3. Create a `.env` file in the root directory with the following content:
+3. Create a `web/.env` file in with the following content:
    ```
    CMS_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJwYmNfMzE0MjYzNTgyMyIsImV4cCI6MTc5MDY5NjkxNSwiaWQiOiJ6Zm8wNnI1OTg4aW9qbnciLCJyZWZyZXNoYWJsZSI6ZmFsc2UsInR5cGUiOiJhdXRoIn0.nxjer_a8Hp3iQONtJhexVKqHIHsShvlqGqhVEsFkoVE
+   CMS_API_BASE=http://cms:8090
    ```
 
-4. Start the services using Docker Compose:
+4. Start the cms services using Docker Compose:
    ```bash
-   docker-compose up -d
+   docker-compose up -d cms
+   ```
+5. Start the web services using Docker Compose:
+   ```bash
+   docker-compose up -d web
    ```
 5. Access the PocketBase admin interface at `http://localhost:8090` and log in using the default credentials:
     - Email: `admin@example.com`

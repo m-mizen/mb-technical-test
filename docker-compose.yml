@@ -9,8 +9,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - CMS_API_TOKEN=${CMS_API_TOKEN}
-      - CMS_API_BASE=${CMS_API_BASE:-http://cms:8090}
+      - CMS_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJwYmNfMzE0MjYzNTgyMyIsImV4cCI6MTc5MDY5NjkxNSwiaWQiOiJ6Zm8wNnI1OTg4aW9qbnciLCJyZWZyZXNoYWJsZSI6ZmFsc2UsInR5cGUiOiJhdXRoIn0.nxjer_a8Hp3iQONtJhexVKqHIHsShvlqGqhVEsFkoVE
+      - CMS_API_BASE=http://cms:8090
     depends_on:
       cms:
         condition: service_healthy

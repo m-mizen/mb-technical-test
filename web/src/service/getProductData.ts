@@ -27,12 +27,15 @@ export async function getProductData(): Promise<ProductCategoryType[]> {
                 // The need to do this here is due to a PocketBase not really making this very easy
                 // I have to provide collectionId and collectionName for the URL builder to work
                 // In a real world, I would want publish the files to a CDN or similar to avoid this complexity
-                icon: product.icon ? pb.files.getURL({
-                    id: product.id,
-                    collectionId: 'product',
-                    collectionName: 'product',
-                    icon: product.icon
-                }, product.icon, { thumb: '50x50' }) : ''
+                icon: product.icon ? (
+                    pb.files.getURL({
+                        id: product.id,
+                        collectionId: 'product',
+                        collectionName: 'product',
+                        icon: product.icon
+                    }, product.icon, { thumb: '50x50' }))
+                    // This line is a hack to make it work in Docker Compose setup where the cms is not accessible via localhost
+                    .replace('http://cms:8090', 'http://127.0.0.1:8090') : ''
             } as ProductType)
                 // Sort products by the 'sort' field
             ).toSorted((a, b) => a.sort - b.sort)
