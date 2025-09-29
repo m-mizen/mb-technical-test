@@ -48,19 +48,23 @@ If you want to run the frontend locally, ensure you have:
    ```bash
    cd web
    ```
+
 2. Install dependencies:
    ```bash
     pnpm install
     ```
+
 3. Create a `.env` file in the `web` directory with the following content:
    ```
    CMS_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb2xsZWN0aW9uSWQiOiJwYmNfMzE0MjYzNTgyMyIsImV4cCI6MTc5MDY5NjkxNSwiaWQiOiJ6Zm8wNnI1OTg4aW9qbnciLCJyZWZyZXNoYWJsZSI6ZmFsc2UsInR5cGUiOiJhdXRoIn0.nxjer_a8Hp3iQONtJhexVKqHIHsShvlqGqhVEsFkoVE
-CMS_API_BASE=http://127.0.0.1:8090
+   CMS_API_BASE=http://127.0.0.1:8090
    ```
+
 4. Start the development server:
    ```bash
    pnpm dev
    ```
+
 5. Open your browser and go to `http://localhost:3000`
 
 #### Running PocketBase Locally
